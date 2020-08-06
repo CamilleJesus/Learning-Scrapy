@@ -1,0 +1,11 @@
+pip install scrapy                   - Install Scrapy using pip
+
+scrapy runspider <spider_name>                  - Run a spider self-contained in a Python file, without having to create a project
+scrapy startproject <project_name>              - Create a new Scrapy project
+scrapy genspider <spider_name> <url>            - Create a new spider for the given URL
+scrapy crawl <spider_name>                      - Start crawling using a spider
+scrapy shell <url>                              - Starts the Scrapy shell for the given URL
+scrapy crawl <spider_name> -o <outputfile_name> - Start crawling using a spider and create an output file
+
+
+source: https://docs.scrapy.org/en/latest/topics/commands.html#std-command-startproject

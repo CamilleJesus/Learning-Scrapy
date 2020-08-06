@@ -1,0 +1,751 @@
+In [1]: response                                                                
+Out[1]: <200 https://www.udacity.com/courses/all>
+
+In [2]: div = response.xpath('//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]
+   ...: /main/div[2]/ul/li[1]')                                                 
+
+In [3]: div                                                                     
+Out[3]: [<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li[1]' data='<li class="catalog-cards__list__item"...'>]
+
+In [4]: div.extract()                                                           
+Out[4]: ['<li class="catalog-cards__list__item"><article class="catalog-component"><div class="catalog-component__card"><span class="catalog-card-tag--mobile">New Program!</span><div class="card__top" role="link" tabindex="0" aria-label="Introduction to Cybersecurity"><div class="card__image-container"><div class="card__image-wrapper"><div data-catalogtype="nanodegree" class="card__image-overlay"></div><div class="card__image" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEVMaXFNx9g6AAAAAXRSTlMAQObYZgAAAApJREFUeNpjYAAAAAIAAeUn3vwAAAAASUVORK5CYII)"></div></div></div><div class="card__title-container"><span class="catalog-card-tag--desktop">New</span><h3 class="card__title__school greyed">School of Programming &amp; Development</h3><h2 class="card__title__nd-name">Introduction to Cybersecurity</h2></div><div class="card__text-content"><section><h4 class="text-content__text greyed">Skills Covered</h4><p class="text-content__text">Threat Assessment, Security Vulnerabilities, Compliance, Governance, Risk, Incident Response</p></section></div></div><div class="card__bottom"><button aria-expanded="false" class="card__bottom__button" aria-controls="nd545-expandable-content">Program Details</button><div class="difficulty"><div data-level="beginner" aria-label="beginner level"></div><small aria-hidden="true">beginner</small></div></div></div><div id="nd545-expandable-content" class="catalog-component__details" aria-hidden="true"><div class="details__layout"><p>Get your start in the high growth field of Cybersecurity by building foundational skills in how to evaluate, maintain, and monitor the security of computer systems.</p><div class="layout__button-container"><div class="reviews"></div><button tabindex="-1" class="button btn button--primary">Learn More</button></div></div></div></article></li>']
+
+In [5]: divs = response.xpath('//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li')                                                                    
+
+In [6]: for div in divs: 
+   ...:     print(div) 
+   ...:                                                                                                                                                                  
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+<Selector xpath='//*[@id="__next"]/div/div/div[2]/div[2]/div/div[2]/main/div[2]/ul/li' data='<li class="catalog-cards__list__item"...'>
+
+In [7]: for div in divs: 
+    ...:     print(div.xpath(".//h2").extract()) 
+    ...:                                                                                                                                                                 
+['<h2 class="card__title__nd-name">Introduction to Cybersecurity</h2>']
+['<h2 class="card__title__nd-name">Establishing Data Infrastructure</h2>']
+['<h2 class="card__title__nd-name">Intermediate JavaScript</h2>']
+['<h2 class="card__title__nd-name">Monetization Strategy</h2>']
+['<h2 class="card__title__nd-name">Applying Data Science to Product Management</h2>']
+['<h2 class="card__title__nd-name">Data Product Manager</h2>']
+['<h2 class="card__title__nd-name">SQL</h2>']
+['<h2 class="card__title__nd-name">Programming for Data Science with Python</h2>']
+['<h2 class="card__title__nd-name">Self Driving Car Engineer</h2>']
+['<h2 class="card__title__nd-name">Machine Learning Engineer</h2>']
+['<h2 class="card__title__nd-name">Introduction to Programming</h2>']
+['<h2 class="card__title__nd-name">Deep Learning</h2>']
+['<h2 class="card__title__nd-name">Data Scientist</h2>']
+['<h2 class="card__title__nd-name">Data Engineer</h2>']
+['<h2 class="card__title__nd-name">Data Analyst</h2>']
+['<h2 class="card__title__nd-name">UX Designer</h2>']
+['<h2 class="card__title__nd-name">Digital Marketing</h2>']
+['<h2 class="card__title__nd-name">AI for Healthcare</h2>']
+['<h2 class="card__title__nd-name">Activation and Retention Strategy</h2>']
+['<h2 class="card__title__nd-name">AWS Cloud Architect</h2>']
+['<h2 class="card__title__nd-name">Growth Product Manager</h2>']
+['<h2 class="card__title__nd-name">Growth and Acquisition Strategy</h2>']
+['<h2 class="card__title__nd-name">Intel® Edge AI for IoT Developers</h2>']
+['<h2 class="card__title__nd-name">Product Manager</h2>']
+['<h2 class="card__title__nd-name">AI for Business Leaders</h2>']
+['<h2 class="card__title__nd-name">Intro to Machine Learning with TensorFlow</h2>']
+['<h2 class="card__title__nd-name">Data Streaming</h2>']
+['<h2 class="card__title__nd-name">Full Stack Web Developer</h2>']
+['<h2 class="card__title__nd-name">Front End Web Developer</h2>']
+['<h2 class="card__title__nd-name">Programming for Data Science with R</h2>']
+['<h2 class="card__title__nd-name">Java Developer</h2>']
+['<h2 class="card__title__nd-name">Intro to Machine Learning with PyTorch</h2>']
+['<h2 class="card__title__nd-name">AI Product Manager</h2>']
+['<h2 class="card__title__nd-name">Sensor Fusion Engineer</h2>']
+['<h2 class="card__title__nd-name">Data Visualization</h2>']
+['<h2 class="card__title__nd-name">Cloud Developer</h2>']
+['<h2 class="card__title__nd-name">Cloud DevOps Engineer</h2>']
+['<h2 class="card__title__nd-name">Intro to Self-Driving Cars</h2>']
+['<h2 class="card__title__nd-name">Robotics Software Engineer</h2>']
+['<h2 class="card__title__nd-name">Computer Vision</h2>']
+['<h2 class="card__title__nd-name">Business Analytics</h2>']
+['<h2 class="card__title__nd-name">Blockchain Developer</h2>']
+['<h2 class="card__title__nd-name">Artificial Intelligence</h2>']
+['<h2 class="card__title__nd-name">Android Basics</h2>']
+['<h2 class="card__title__nd-name">AI Programming with Python</h2>']
+['<h2 class="card__title__nd-name">Android Developer</h2>']
+['<h2 class="card__title__nd-name">Artificial Intelligence for Trading</h2>']
+['<h2 class="card__title__nd-name">Deep Reinforcement Learning</h2>']
+['<h2 class="card__title__nd-name">React</h2>']
+['<h2 class="card__title__nd-name">Predictive Analytics For Business</h2>']
+['<h2 class="card__title__nd-name">Natural Language Processing</h2>']
+['<h2 class="card__title__nd-name">iOS Developer</h2>']
+['<h2 class="card__title__nd-name">Flying Car and Autonomous Flight Engineer</h2>']
+['<h2 class="card__title__nd-name">C++</h2>']
+['<h2 class="card__title__nd-name">Data Structures and Algorithms</h2>']
+['<h2 class="card__title__nd-name">Marketing Analytics</h2>']
+['<h2 class="card__title__nd-name">Intro to Cloud Computing</h2>']
+['<h2 class="card__title__nd-name">Cyber-Physical Systems Design &amp; Analysis</h2>']
+['<h2 class="card__title__nd-name">Web Tooling &amp; Automation</h2>']
+['<h2 class="card__title__nd-name">Rapid Prototyping</h2>']
+['<h2 class="card__title__nd-name">Front End Frameworks</h2>']
+['<h2 class="card__title__nd-name">Responsive Web Design Fundamentals</h2>']
+['<h2 class="card__title__nd-name">Linux Command Line Basics</h2>']
+['<h2 class="card__title__nd-name">How to Install Android Studio</h2>']
+['<h2 class="card__title__nd-name">Creating an Analytical Dataset</h2>']
+['<h2 class="card__title__nd-name">Android Basics: Multiscreen Apps</h2>']
+['<h2 class="card__title__nd-name">Problem Solving with Advanced Analytics</h2>']
+['<h2 class="card__title__nd-name">Website Performance Optimization</h2>']
+['<h2 class="card__title__nd-name">iOS Networking with Swift</h2>']
+['<h2 class="card__title__nd-name">Linear Algebra Refresher Course</h2>']
+['<h2 class="card__title__nd-name">JavaScript Design Patterns</h2>']
+['<h2 class="card__title__nd-name">Classification Models</h2>']
+['<h2 class="card__title__nd-name">Product Design</h2>']
+['<h2 class="card__title__nd-name">Android Basics: User Input</h2>']
+['<h2 class="card__title__nd-name">Android Performance</h2>']
+['<h2 class="card__title__nd-name">Machine Learning: Unsupervised Learning</h2>']
+['<h2 class="card__title__nd-name">Segmentation and Clustering</h2>']
+['<h2 class="card__title__nd-name">Responsive Images</h2>']
+['<h2 class="card__title__nd-name">Xcode Debugging</h2>']
+['<h2 class="card__title__nd-name">Gradle for Android and Java</h2>']
+['<h2 class="card__title__nd-name">Build Native Mobile Apps with Flutter</h2>']
+['<h2 class="card__title__nd-name">JavaScript Promises</h2>']
+['<h2 class="card__title__nd-name">UIKit Fundamentals</h2>']
+['<h2 class="card__title__nd-name">Time Series Forecasting</h2>']
+['<h2 class="card__title__nd-name">App Marketing</h2>']
+['<h2 class="card__title__nd-name">Android Basics: User Interface</h2>']
+['<h2 class="card__title__nd-name">Client-Server Communication</h2>']
+['<h2 class="card__title__nd-name">What is Programming?</h2>']
+['<h2 class="card__title__nd-name">Building High Conversion Web Forms</h2>']
+['<h2 class="card__title__nd-name">Big Data Analytics in Healthcare</h2>']
+['<h2 class="card__title__nd-name">Advanced Android App Development</h2>']
+['<h2 class="card__title__nd-name">Software Architecture &amp; Design</h2>']
+['<h2 class="card__title__nd-name">App Monetization</h2>']
+['<h2 class="card__title__nd-name">Intro to Information Security</h2>']
+['<h2 class="card__title__nd-name">Craft Your Cover Letter</h2>']
+['<h2 class="card__title__nd-name">Authentication &amp; Authorization: OAuth</h2>']
+['<h2 class="card__title__nd-name">Intro to iOS App Development with Swift</h2>']
+['<h2 class="card__title__nd-name">Intro to Descriptive Statistics</h2>']
+['<h2 class="card__title__nd-name">Data Science Interview Prep</h2>']
+['<h2 class="card__title__nd-name">Introduction to Operating Systems</h2>']
+['<h2 class="card__title__nd-name">Android Basics: Networking</h2>']
+['<h2 class="card__title__nd-name">Web Accessibility</h2>']
+['<h2 class="card__title__nd-name">Android Basics: Data Storage</h2>']
+['<h2 class="card__title__nd-name">Scalable Microservices with Kubernetes</h2>']
+['<h2 class="card__title__nd-name">Intel® Edge AI Fundamentals with OpenVINO™</h2>']
+['<h2 class="card__title__nd-name">Developing Android Apps with Kotlin</h2>']
+['<h2 class="card__title__nd-name">Artificial Intelligence</h2>']
+['<h2 class="card__title__nd-name">Browser Rendering Optimization</h2>']
+['<h2 class="card__title__nd-name">Learn Swift Programming Syntax</h2>']
+['<h2 class="card__title__nd-name">Offline Web Applications</h2>']
+['<h2 class="card__title__nd-name">Kotlin for Android Developers</h2>']
+['<h2 class="card__title__nd-name">UX Design for Mobile Developers</h2>']
+['<h2 class="card__title__nd-name">Secure and Private AI</h2>']
+['<h2 class="card__title__nd-name">Model Building and Validation</h2>']
+['<h2 class="card__title__nd-name">Intro to Data Science</h2>']
+['<h2 class="card__title__nd-name">Software Development Process</h2>']
+['<h2 class="card__title__nd-name">Data Visualization in Tableau</h2>']
+['<h2 class="card__title__nd-name">Data Visualization and D3.js</h2>']
+['<h2 class="card__title__nd-name">Intro to Progressive Web Apps</h2>']
+['<h2 class="card__title__nd-name">Writing READMEs</h2>']
+['<h2 class="card__title__nd-name">Machine Learning for Trading</h2>']
+['<h2 class="card__title__nd-name">Software Analysis &amp; Testing</h2>']
+['<h2 class="card__title__nd-name">Android Interview Prep</h2>']
+['<h2 class="card__title__nd-name">iOS Persistence and Core Data</h2>']
+['<h2 class="card__title__nd-name">Intro to Data Analysis</h2>']
+['<h2 class="card__title__nd-name">Computer Networking</h2>']
+['<h2 class="card__title__nd-name">Firebase Analytics: iOS</h2>']
+['<h2 class="card__title__nd-name">Human-Computer Interaction</h2>']
+['<h2 class="card__title__nd-name">2D Game Development with libGDX</h2>']
+['<h2 class="card__title__nd-name">Machine Learning</h2>']
+['<h2 class="card__title__nd-name">Intro to jQuery</h2>']
+['<h2 class="card__title__nd-name">Intro to Hadoop and MapReduce</h2>']
+['<h2 class="card__title__nd-name">Real-Time Analytics with Apache Storm</h2>']
+['<h2 class="card__title__nd-name">Cyber-Physical Systems Security</h2>']
+['<h2 class="card__title__nd-name">Introduction to Graduate Algorithms</h2>']
+['<h2 class="card__title__nd-name">Dynamic Web Applications with Sinatra</h2>']
+['<h2 class="card__title__nd-name">How to Make a Platformer Using libGDX</h2>']
+['<h2 class="card__title__nd-name">A/B Testing</h2>']
+['<h2 class="card__title__nd-name">JavaScript Testing</h2>']
+['<h2 class="card__title__nd-name">Object-Oriented JavaScript</h2>']
+['<h2 class="card__title__nd-name">Localization Essentials</h2>']
+['<h2 class="card__title__nd-name">Data Analysis with R</h2>']
+['<h2 class="card__title__nd-name">HTML5 Canvas</h2>']
+['<h2 class="card__title__nd-name">Compilers: Theory and Practice</h2>']
+['<h2 class="card__title__nd-name">Knowledge-Based AI: Cognitive Systems</h2>']
+['<h2 class="card__title__nd-name">Object Oriented Programming in Java</h2>']
+['<h2 class="card__title__nd-name">Designing RESTful APIs</h2>']
+['<h2 class="card__title__nd-name">Intro to JavaScript</h2>']
+['<h2 class="card__title__nd-name">GT - Refresher - Advanced OS</h2>']
+['<h2 class="card__title__nd-name">Grand Central Dispatch (GCD)</h2>']
+['<h2 class="card__title__nd-name">Swift for Beginners</h2>']
+['<h2 class="card__title__nd-name">A/B Testing for Business Analysts</h2>']
+['<h2 class="card__title__nd-name">Intro to Statistics</h2>']
+['<h2 class="card__title__nd-name">Introduction to TensorFlow Lite</h2>']
+['<h2 class="card__title__nd-name">Intro to HTML and CSS</h2>']
+['<h2 class="card__title__nd-name">Developing Android Apps</h2>']
+['<h2 class="card__title__nd-name">Introduction to Computer Vision</h2>']
+['<h2 class="card__title__nd-name">Introduction to Python Programming</h2>']
+['<h2 class="card__title__nd-name">Intro to TensorFlow for Deep Learning</h2>']
+['<h2 class="card__title__nd-name">Introduction to Virtual Reality</h2>']
+['<h2 class="card__title__nd-name">Objective-C for Swift Developers</h2>']
+['<h2 class="card__title__nd-name">Software Testing</h2>']
+['<h2 class="card__title__nd-name">Interactive 3D Graphics</h2>']
+['<h2 class="card__title__nd-name">Full Stack Foundations</h2>']
+['<h2 class="card__title__nd-name">High Performance Computer Architecture</h2>']
+['<h2 class="card__title__nd-name">Machine Learning Interview Preparation</h2>']
+['<h2 class="card__title__nd-name">How to Build a Startup</h2>']
+['<h2 class="card__title__nd-name">AutoLayout</h2>']
+['<h2 class="card__title__nd-name">Kotlin Bootcamp for Programmers</h2>']
+['<h2 class="card__title__nd-name">Shell Workshop</h2>']
+['<h2 class="card__title__nd-name">Core ML: Machine Learning for iOS</h2>']
+['<h2 class="card__title__nd-name">Eigenvectors and Eigenvalues</h2>']
+['<h2 class="card__title__nd-name">Statistics</h2>']
+['<h2 class="card__title__nd-name">Intro to Artificial Intelligence</h2>']
+['<h2 class="card__title__nd-name">Intro to Theoretical Computer Science</h2>']
+['<h2 class="card__title__nd-name">Design of Computer Programs</h2>']
+['<h2 class="card__title__nd-name">Front-End Interview Prep</h2>']
+['<h2 class="card__title__nd-name">Data Wrangling with MongoDB</h2>']
+['<h2 class="card__title__nd-name">Full-Stack Interview Prep</h2>']
+['<h2 class="card__title__nd-name">Data Structures &amp; Algorithms in Swift</h2>']
+['<h2 class="card__title__nd-name">Swift for Developers</h2>']
+['<h2 class="card__title__nd-name">Firebase in a Weekend: Android</h2>']
+['<h2 class="card__title__nd-name">Software Debugging</h2>']
+['<h2 class="card__title__nd-name">Deploying a Hadoop Cluster</h2>']
+['<h2 class="card__title__nd-name">Differential Equations in Action</h2>']
+['<h2 class="card__title__nd-name">Server-Side Swift</h2>']
+['<h2 class="card__title__nd-name">Programming Languages</h2>']
+['<h2 class="card__title__nd-name">SQL for Data Analysis</h2>']
+['<h2 class="card__title__nd-name">iOS Interview Prep</h2>']
+['<h2 class="card__title__nd-name">Artificial Intelligence for Robotics</h2>']
+['<h2 class="card__title__nd-name">Networking for Web Developers</h2>']
+['<h2 class="card__title__nd-name">Database Systems Concepts &amp; Design</h2>']
+['<h2 class="card__title__nd-name">Intro to Physics</h2>']
+['<h2 class="card__title__nd-name">Intro to Relational Databases</h2>']
+['<h2 class="card__title__nd-name">Self-Driving Fundamentals: Featuring Apollo </h2>']
+['<h2 class="card__title__nd-name">ES6 - JavaScript Improved</h2>']
+['<h2 class="card__title__nd-name">Mobile Design and Usability for iOS</h2>']
+['<h2 class="card__title__nd-name">Intro to AJAX</h2>']
+['<h2 class="card__title__nd-name">Intro to Algorithms</h2>']
+['<h2 class="card__title__nd-name">The MVC Pattern in Ruby</h2>']
+['<h2 class="card__title__nd-name">WeChat Mini Program Development</h2>']
+['<h2 class="card__title__nd-name">Refresh Your Resume</h2>']
+['<h2 class="card__title__nd-name">Intro to Inferential Statistics</h2>']
+['<h2 class="card__title__nd-name">Asynchronous JavaScript Requests</h2>']
+['<h2 class="card__title__nd-name">Intro to Deep Learning with PyTorch</h2>']
+['<h2 class="card__title__nd-name">Embedded Systems</h2>']
+['<h2 class="card__title__nd-name">High Performance Computing</h2>']
+['<h2 class="card__title__nd-name">HTTP &amp; Web Servers</h2>']
+['<h2 class="card__title__nd-name">Advanced Android with Kotlin</h2>']
+['<h2 class="card__title__nd-name">Computability, Complexity &amp; Algorithms</h2>']
+['<h2 class="card__title__nd-name">Advanced Operating Systems</h2>']
+['<h2 class="card__title__nd-name">Passwordless Login Solutions for iOS</h2>']
+['<h2 class="card__title__nd-name">AWS DeepRacer</h2>']
+['<h2 class="card__title__nd-name">Version Control with Git</h2>']
+['<h2 class="card__title__nd-name">Firebase in a Weekend: iOS</h2>']
+['<h2 class="card__title__nd-name">Intro to Point &amp; Click App Development</h2>']
+['<h2 class="card__title__nd-name">Deploying Applications with Heroku</h2>']
+['<h2 class="card__title__nd-name">Applied Cryptography</h2>']
+['<h2 class="card__title__nd-name">Spark</h2>']
+['<h2 class="card__title__nd-name">VR Interview Prep</h2>']
+['<h2 class="card__title__nd-name">Java Programming Basics</h2>']
+['<h2 class="card__title__nd-name">C++ For Programmers</h2>']
+['<h2 class="card__title__nd-name">Data Analysis and Visualization</h2>']
+['<h2 class="card__title__nd-name">Intro to Backend</h2>']
+['<h2 class="card__title__nd-name">Network Security</h2>']
+['<h2 class="card__title__nd-name">JavaScript and the DOM</h2>']
+['<h2 class="card__title__nd-name">Firebase Analytics: Android</h2>']
+['<h2 class="card__title__nd-name">Reinforcement Learning</h2>']
+['<h2 class="card__title__nd-name">Configuring Linux Web Servers</h2>']
+['<h2 class="card__title__nd-name">How to Make an iOS App</h2>']
+['<h2 class="card__title__nd-name">Intro to DevOps</h2>']
+['<h2 class="card__title__nd-name">Strengthen Your LinkedIn Network &amp; Brand</h2>']
+['<h2 class="card__title__nd-name">Google Maps APIs</h2>']
+['<h2 class="card__title__nd-name">Passwordless Login Solutions for Android</h2>']
+['<h2 class="card__title__nd-name">Mobile Design and Usability for Android</h2>']
+['<h2 class="card__title__nd-name">Intro to Psychology</h2>']
+['<h2 class="card__title__nd-name">Engagement &amp; Monetization | Mobile Games</h2>']
+['<h2 class="card__title__nd-name">Get Your Startup Started</h2>']
+['<h2 class="card__title__nd-name">Introduction to Machine Learning Course</h2>']
+['<h2 class="card__title__nd-name">Material Design for Android Developers</h2>']
+['<h2 class="card__title__nd-name">Managing Remote Teams with Upwork</h2>']
+['<h2 class="card__title__nd-name">Product Manager Interview Preparation</h2>']
+
+In [8]: for div in divs: 
+    ...:     print(div.xpath(".//h2").extract_first()) 
+    ...:                                                                                                                                                                 
+<h2 class="card__title__nd-name">Introduction to Cybersecurity</h2>
+<h2 class="card__title__nd-name">Establishing Data Infrastructure</h2>
+<h2 class="card__title__nd-name">Intermediate JavaScript</h2>
+<h2 class="card__title__nd-name">Monetization Strategy</h2>
+<h2 class="card__title__nd-name">Applying Data Science to Product Management</h2>
+<h2 class="card__title__nd-name">Data Product Manager</h2>
+<h2 class="card__title__nd-name">SQL</h2>
+<h2 class="card__title__nd-name">Programming for Data Science with Python</h2>
+<h2 class="card__title__nd-name">Self Driving Car Engineer</h2>
+<h2 class="card__title__nd-name">Machine Learning Engineer</h2>
+<h2 class="card__title__nd-name">Introduction to Programming</h2>
+<h2 class="card__title__nd-name">Deep Learning</h2>
+<h2 class="card__title__nd-name">Data Scientist</h2>
+<h2 class="card__title__nd-name">Data Engineer</h2>
+<h2 class="card__title__nd-name">Data Analyst</h2>
+<h2 class="card__title__nd-name">UX Designer</h2>
+<h2 class="card__title__nd-name">Digital Marketing</h2>
+<h2 class="card__title__nd-name">AI for Healthcare</h2>
+<h2 class="card__title__nd-name">Activation and Retention Strategy</h2>
+<h2 class="card__title__nd-name">AWS Cloud Architect</h2>
+<h2 class="card__title__nd-name">Growth Product Manager</h2>
+<h2 class="card__title__nd-name">Growth and Acquisition Strategy</h2>
+<h2 class="card__title__nd-name">Intel® Edge AI for IoT Developers</h2>
+<h2 class="card__title__nd-name">Product Manager</h2>
+<h2 class="card__title__nd-name">AI for Business Leaders</h2>
+<h2 class="card__title__nd-name">Intro to Machine Learning with TensorFlow</h2>
+<h2 class="card__title__nd-name">Data Streaming</h2>
+<h2 class="card__title__nd-name">Full Stack Web Developer</h2>
+<h2 class="card__title__nd-name">Front End Web Developer</h2>
+<h2 class="card__title__nd-name">Programming for Data Science with R</h2>
+<h2 class="card__title__nd-name">Java Developer</h2>
+<h2 class="card__title__nd-name">Intro to Machine Learning with PyTorch</h2>
+<h2 class="card__title__nd-name">AI Product Manager</h2>
+<h2 class="card__title__nd-name">Sensor Fusion Engineer</h2>
+<h2 class="card__title__nd-name">Data Visualization</h2>
+<h2 class="card__title__nd-name">Cloud Developer</h2>
+<h2 class="card__title__nd-name">Cloud DevOps Engineer</h2>
+<h2 class="card__title__nd-name">Intro to Self-Driving Cars</h2>
+<h2 class="card__title__nd-name">Robotics Software Engineer</h2>
+<h2 class="card__title__nd-name">Computer Vision</h2>
+<h2 class="card__title__nd-name">Business Analytics</h2>
+<h2 class="card__title__nd-name">Blockchain Developer</h2>
+<h2 class="card__title__nd-name">Artificial Intelligence</h2>
+<h2 class="card__title__nd-name">Android Basics</h2>
+<h2 class="card__title__nd-name">AI Programming with Python</h2>
+<h2 class="card__title__nd-name">Android Developer</h2>
+<h2 class="card__title__nd-name">Artificial Intelligence for Trading</h2>
+<h2 class="card__title__nd-name">Deep Reinforcement Learning</h2>
+<h2 class="card__title__nd-name">React</h2>
+<h2 class="card__title__nd-name">Predictive Analytics For Business</h2>
+<h2 class="card__title__nd-name">Natural Language Processing</h2>
+<h2 class="card__title__nd-name">iOS Developer</h2>
+<h2 class="card__title__nd-name">Flying Car and Autonomous Flight Engineer</h2>
+<h2 class="card__title__nd-name">C++</h2>
+<h2 class="card__title__nd-name">Data Structures and Algorithms</h2>
+<h2 class="card__title__nd-name">Marketing Analytics</h2>
+<h2 class="card__title__nd-name">Intro to Cloud Computing</h2>
+<h2 class="card__title__nd-name">Cyber-Physical Systems Design &amp; Analysis</h2>
+<h2 class="card__title__nd-name">Web Tooling &amp; Automation</h2>
+<h2 class="card__title__nd-name">Rapid Prototyping</h2>
+<h2 class="card__title__nd-name">Front End Frameworks</h2>
+<h2 class="card__title__nd-name">Responsive Web Design Fundamentals</h2>
+<h2 class="card__title__nd-name">Linux Command Line Basics</h2>
+<h2 class="card__title__nd-name">How to Install Android Studio</h2>
+<h2 class="card__title__nd-name">Creating an Analytical Dataset</h2>
+<h2 class="card__title__nd-name">Android Basics: Multiscreen Apps</h2>
+<h2 class="card__title__nd-name">Problem Solving with Advanced Analytics</h2>
+<h2 class="card__title__nd-name">Website Performance Optimization</h2>
+<h2 class="card__title__nd-name">iOS Networking with Swift</h2>
+<h2 class="card__title__nd-name">Linear Algebra Refresher Course</h2>
+<h2 class="card__title__nd-name">JavaScript Design Patterns</h2>
+<h2 class="card__title__nd-name">Classification Models</h2>
+<h2 class="card__title__nd-name">Product Design</h2>
+<h2 class="card__title__nd-name">Android Basics: User Input</h2>
+<h2 class="card__title__nd-name">Android Performance</h2>
+<h2 class="card__title__nd-name">Machine Learning: Unsupervised Learning</h2>
+<h2 class="card__title__nd-name">Segmentation and Clustering</h2>
+<h2 class="card__title__nd-name">Responsive Images</h2>
+<h2 class="card__title__nd-name">Xcode Debugging</h2>
+<h2 class="card__title__nd-name">Gradle for Android and Java</h2>
+<h2 class="card__title__nd-name">Build Native Mobile Apps with Flutter</h2>
+<h2 class="card__title__nd-name">JavaScript Promises</h2>
+<h2 class="card__title__nd-name">UIKit Fundamentals</h2>
+<h2 class="card__title__nd-name">Time Series Forecasting</h2>
+<h2 class="card__title__nd-name">App Marketing</h2>
+<h2 class="card__title__nd-name">Android Basics: User Interface</h2>
+<h2 class="card__title__nd-name">Client-Server Communication</h2>
+<h2 class="card__title__nd-name">What is Programming?</h2>
+<h2 class="card__title__nd-name">Building High Conversion Web Forms</h2>
+<h2 class="card__title__nd-name">Big Data Analytics in Healthcare</h2>
+<h2 class="card__title__nd-name">Advanced Android App Development</h2>
+<h2 class="card__title__nd-name">Software Architecture &amp; Design</h2>
+<h2 class="card__title__nd-name">App Monetization</h2>
+<h2 class="card__title__nd-name">Intro to Information Security</h2>
+<h2 class="card__title__nd-name">Craft Your Cover Letter</h2>
+<h2 class="card__title__nd-name">Authentication &amp; Authorization: OAuth</h2>
+<h2 class="card__title__nd-name">Intro to iOS App Development with Swift</h2>
+<h2 class="card__title__nd-name">Intro to Descriptive Statistics</h2>
+<h2 class="card__title__nd-name">Data Science Interview Prep</h2>
+<h2 class="card__title__nd-name">Introduction to Operating Systems</h2>
+<h2 class="card__title__nd-name">Android Basics: Networking</h2>
+<h2 class="card__title__nd-name">Web Accessibility</h2>
+<h2 class="card__title__nd-name">Android Basics: Data Storage</h2>
+<h2 class="card__title__nd-name">Scalable Microservices with Kubernetes</h2>
+<h2 class="card__title__nd-name">Intel® Edge AI Fundamentals with OpenVINO™</h2>
+<h2 class="card__title__nd-name">Developing Android Apps with Kotlin</h2>
+<h2 class="card__title__nd-name">Artificial Intelligence</h2>
+<h2 class="card__title__nd-name">Browser Rendering Optimization</h2>
+<h2 class="card__title__nd-name">Learn Swift Programming Syntax</h2>
+<h2 class="card__title__nd-name">Offline Web Applications</h2>
+<h2 class="card__title__nd-name">Kotlin for Android Developers</h2>
+<h2 class="card__title__nd-name">UX Design for Mobile Developers</h2>
+<h2 class="card__title__nd-name">Secure and Private AI</h2>
+<h2 class="card__title__nd-name">Model Building and Validation</h2>
+<h2 class="card__title__nd-name">Intro to Data Science</h2>
+<h2 class="card__title__nd-name">Software Development Process</h2>
+<h2 class="card__title__nd-name">Data Visualization in Tableau</h2>
+<h2 class="card__title__nd-name">Data Visualization and D3.js</h2>
+<h2 class="card__title__nd-name">Intro to Progressive Web Apps</h2>
+<h2 class="card__title__nd-name">Writing READMEs</h2>
+<h2 class="card__title__nd-name">Machine Learning for Trading</h2>
+<h2 class="card__title__nd-name">Software Analysis &amp; Testing</h2>
+<h2 class="card__title__nd-name">Android Interview Prep</h2>
+<h2 class="card__title__nd-name">iOS Persistence and Core Data</h2>
+<h2 class="card__title__nd-name">Intro to Data Analysis</h2>
+<h2 class="card__title__nd-name">Computer Networking</h2>
+<h2 class="card__title__nd-name">Firebase Analytics: iOS</h2>
+<h2 class="card__title__nd-name">Human-Computer Interaction</h2>
+<h2 class="card__title__nd-name">2D Game Development with libGDX</h2>
+<h2 class="card__title__nd-name">Machine Learning</h2>
+<h2 class="card__title__nd-name">Intro to jQuery</h2>
+<h2 class="card__title__nd-name">Intro to Hadoop and MapReduce</h2>
+<h2 class="card__title__nd-name">Real-Time Analytics with Apache Storm</h2>
+<h2 class="card__title__nd-name">Cyber-Physical Systems Security</h2>
+<h2 class="card__title__nd-name">Introduction to Graduate Algorithms</h2>
+<h2 class="card__title__nd-name">Dynamic Web Applications with Sinatra</h2>
+<h2 class="card__title__nd-name">How to Make a Platformer Using libGDX</h2>
+<h2 class="card__title__nd-name">A/B Testing</h2>
+<h2 class="card__title__nd-name">JavaScript Testing</h2>
+<h2 class="card__title__nd-name">Object-Oriented JavaScript</h2>
+<h2 class="card__title__nd-name">Localization Essentials</h2>
+<h2 class="card__title__nd-name">Data Analysis with R</h2>
+<h2 class="card__title__nd-name">HTML5 Canvas</h2>
+<h2 class="card__title__nd-name">Compilers: Theory and Practice</h2>
+<h2 class="card__title__nd-name">Knowledge-Based AI: Cognitive Systems</h2>
+<h2 class="card__title__nd-name">Object Oriented Programming in Java</h2>
+<h2 class="card__title__nd-name">Designing RESTful APIs</h2>
+<h2 class="card__title__nd-name">Intro to JavaScript</h2>
+<h2 class="card__title__nd-name">GT - Refresher - Advanced OS</h2>
+<h2 class="card__title__nd-name">Grand Central Dispatch (GCD)</h2>
+<h2 class="card__title__nd-name">Swift for Beginners</h2>
+<h2 class="card__title__nd-name">A/B Testing for Business Analysts</h2>
+<h2 class="card__title__nd-name">Intro to Statistics</h2>
+<h2 class="card__title__nd-name">Introduction to TensorFlow Lite</h2>
+<h2 class="card__title__nd-name">Intro to HTML and CSS</h2>
+<h2 class="card__title__nd-name">Developing Android Apps</h2>
+<h2 class="card__title__nd-name">Introduction to Computer Vision</h2>
+<h2 class="card__title__nd-name">Introduction to Python Programming</h2>
+<h2 class="card__title__nd-name">Intro to TensorFlow for Deep Learning</h2>
+<h2 class="card__title__nd-name">Introduction to Virtual Reality</h2>
+<h2 class="card__title__nd-name">Objective-C for Swift Developers</h2>
+<h2 class="card__title__nd-name">Software Testing</h2>
+<h2 class="card__title__nd-name">Interactive 3D Graphics</h2>
+<h2 class="card__title__nd-name">Full Stack Foundations</h2>
+<h2 class="card__title__nd-name">High Performance Computer Architecture</h2>
+<h2 class="card__title__nd-name">Machine Learning Interview Preparation</h2>
+<h2 class="card__title__nd-name">How to Build a Startup</h2>
+<h2 class="card__title__nd-name">AutoLayout</h2>
+<h2 class="card__title__nd-name">Kotlin Bootcamp for Programmers</h2>
+<h2 class="card__title__nd-name">Shell Workshop</h2>
+<h2 class="card__title__nd-name">Core ML: Machine Learning for iOS</h2>
+<h2 class="card__title__nd-name">Eigenvectors and Eigenvalues</h2>
+<h2 class="card__title__nd-name">Statistics</h2>
+<h2 class="card__title__nd-name">Intro to Artificial Intelligence</h2>
+<h2 class="card__title__nd-name">Intro to Theoretical Computer Science</h2>
+<h2 class="card__title__nd-name">Design of Computer Programs</h2>
+<h2 class="card__title__nd-name">Front-End Interview Prep</h2>
+<h2 class="card__title__nd-name">Data Wrangling with MongoDB</h2>
+<h2 class="card__title__nd-name">Full-Stack Interview Prep</h2>
+<h2 class="card__title__nd-name">Data Structures &amp; Algorithms in Swift</h2>
+<h2 class="card__title__nd-name">Swift for Developers</h2>
+<h2 class="card__title__nd-name">Firebase in a Weekend: Android</h2>
+<h2 class="card__title__nd-name">Software Debugging</h2>
+<h2 class="card__title__nd-name">Deploying a Hadoop Cluster</h2>
+<h2 class="card__title__nd-name">Differential Equations in Action</h2>
+<h2 class="card__title__nd-name">Server-Side Swift</h2>
+<h2 class="card__title__nd-name">Programming Languages</h2>
+<h2 class="card__title__nd-name">SQL for Data Analysis</h2>
+<h2 class="card__title__nd-name">iOS Interview Prep</h2>
+<h2 class="card__title__nd-name">Artificial Intelligence for Robotics</h2>
+<h2 class="card__title__nd-name">Networking for Web Developers</h2>
+<h2 class="card__title__nd-name">Database Systems Concepts &amp; Design</h2>
+<h2 class="card__title__nd-name">Intro to Physics</h2>
+<h2 class="card__title__nd-name">Intro to Relational Databases</h2>
+<h2 class="card__title__nd-name">Self-Driving Fundamentals: Featuring Apollo </h2>
+<h2 class="card__title__nd-name">ES6 - JavaScript Improved</h2>
+<h2 class="card__title__nd-name">Mobile Design and Usability for iOS</h2>
+<h2 class="card__title__nd-name">Intro to AJAX</h2>
+<h2 class="card__title__nd-name">Intro to Algorithms</h2>
+<h2 class="card__title__nd-name">The MVC Pattern in Ruby</h2>
+<h2 class="card__title__nd-name">WeChat Mini Program Development</h2>
+<h2 class="card__title__nd-name">Refresh Your Resume</h2>
+<h2 class="card__title__nd-name">Intro to Inferential Statistics</h2>
+<h2 class="card__title__nd-name">Asynchronous JavaScript Requests</h2>
+<h2 class="card__title__nd-name">Intro to Deep Learning with PyTorch</h2>
+<h2 class="card__title__nd-name">Embedded Systems</h2>
+<h2 class="card__title__nd-name">High Performance Computing</h2>
+<h2 class="card__title__nd-name">HTTP &amp; Web Servers</h2>
+<h2 class="card__title__nd-name">Advanced Android with Kotlin</h2>
+<h2 class="card__title__nd-name">Computability, Complexity &amp; Algorithms</h2>
+<h2 class="card__title__nd-name">Advanced Operating Systems</h2>
+<h2 class="card__title__nd-name">Passwordless Login Solutions for iOS</h2>
+<h2 class="card__title__nd-name">AWS DeepRacer</h2>
+<h2 class="card__title__nd-name">Version Control with Git</h2>
+<h2 class="card__title__nd-name">Firebase in a Weekend: iOS</h2>
+<h2 class="card__title__nd-name">Intro to Point &amp; Click App Development</h2>
+<h2 class="card__title__nd-name">Deploying Applications with Heroku</h2>
+<h2 class="card__title__nd-name">Applied Cryptography</h2>
+<h2 class="card__title__nd-name">Spark</h2>
+<h2 class="card__title__nd-name">VR Interview Prep</h2>
+<h2 class="card__title__nd-name">Java Programming Basics</h2>
+<h2 class="card__title__nd-name">C++ For Programmers</h2>
+<h2 class="card__title__nd-name">Data Analysis and Visualization</h2>
+<h2 class="card__title__nd-name">Intro to Backend</h2>
+<h2 class="card__title__nd-name">Network Security</h2>
+<h2 class="card__title__nd-name">JavaScript and the DOM</h2>
+<h2 class="card__title__nd-name">Firebase Analytics: Android</h2>
+<h2 class="card__title__nd-name">Reinforcement Learning</h2>
+<h2 class="card__title__nd-name">Configuring Linux Web Servers</h2>
+<h2 class="card__title__nd-name">How to Make an iOS App</h2>
+<h2 class="card__title__nd-name">Intro to DevOps</h2>
+<h2 class="card__title__nd-name">Strengthen Your LinkedIn Network &amp; Brand</h2>
+<h2 class="card__title__nd-name">Google Maps APIs</h2>
+<h2 class="card__title__nd-name">Passwordless Login Solutions for Android</h2>
+<h2 class="card__title__nd-name">Mobile Design and Usability for Android</h2>
+<h2 class="card__title__nd-name">Intro to Psychology</h2>
+<h2 class="card__title__nd-name">Engagement &amp; Monetization | Mobile Games</h2>
+<h2 class="card__title__nd-name">Get Your Startup Started</h2>
+<h2 class="card__title__nd-name">Introduction to Machine Learning Course</h2>
+<h2 class="card__title__nd-name">Material Design for Android Developers</h2>
+<h2 class="card__title__nd-name">Managing Remote Teams with Upwork</h2>
+<h2 class="card__title__nd-name">Product Manager Interview Preparation</h2>
